@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #6E8898FF;
+}
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+.home-container{
+display: flex;
+min-height: 100vh;
+align-items: center;
+justify-content: center;
+}
+.side-btn{
+    color: #339E66FF;
+    background: transparent;
+    font-size: 20px;
+    border: transparent;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    animation: bounce 2s ease-in-out infinite;
+    transition: all 0.5s linear;
+}
+
+@keyframes bounce {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+.show-btn{
+    background: #E3170AFF;
+    padding: 0.5rem;
+    color: #fff;
+    border-color: transparent;
+    border-radius: 0.25rem;
+    
+}
+.modal-container{
+    background: #F7B32BFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+.close-modal-btn{
+color: #E3170AFF;
+border-color: transparent;
+font-size: 1.5rem;
+background: transparent;
+cursor: pointer;
+position: absolute;
+top: 10px;
+right: 10px;
+}
+.modal-overlay{
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100% ;
+    display: grid;
+    place-items: center;
+    background: #F4FFFDFF;
+    transition: all 0.3s ease;
+    z-index: -1;
+
+
+}
+.show-modal{
+ visibility: visible;
+ z-index: 100;
+}
+.sidebar{
+    background: #A9E5BBFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 1rem;
+    transition: all 0.3s ease;
+    transform: translate(-100%);
+}
+.show-sidebar{
+    transform: translate(0);
+}
+.sidebar-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+.links a{ 
+   display: flex;
+   align-items: center;
+   font-size: 1.5rem;
+   padding: 1rem 1rem;
+   transition: all 0.3s ease;
+   letter-spacing: 0.1rem;
+color: #184A45FF;
+   text-transform: capitalize;
+}
+.links a svg{
+    margin-right: 15px;
+    font-size: 1.75rem;
+    color: #435E55FF;
+}
+.social-icon{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+.social-icon a{
+    font-size: 1.15rem;
+    color: #2C5F2D;
+    margin-left: 15px;
+    margin-top: 1rem;
+}
+.close-side-btn{
+color: #E3170AFF;
+border-color: transparent;
+font-size: 1.5rem;
+background: transparent;
+cursor: pointer;
+}
